@@ -1,4 +1,4 @@
-package com.mkpouto.tasks;
+package com.mkpouto;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

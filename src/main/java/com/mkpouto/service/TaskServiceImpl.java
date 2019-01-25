@@ -1,7 +1,7 @@
-package com.mkpouto.tasks.service;
+package com.mkpouto.service;
 
-import com.mkpouto.tasks.domain.Task;
-import com.mkpouto.tasks.repository.TaskRepository;
+import com.mkpouto.domain.Task;
+import com.mkpouto.repository.TaskRepository;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -20,6 +20,7 @@ public class TaskServiceImpl implements TaskService {
 
     @Override
     public Task save(Task task) {
+        //return actual task
         return this.taskRepository.save(task);
     }
 }

@@ -1,7 +1,7 @@
-package com.mkpouto.tasks;
+package com.mkpouto;
 
-import com.mkpouto.tasks.domain.Task;
-import com.mkpouto.tasks.service.TaskService;
+import com.mkpouto.domain.Task;
+import com.mkpouto.service.TaskService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,7 +18,7 @@ public class TasksApplication {
 	}
 
 	@Bean
-	CommandLineRunner runner(TaskService taskService){
+    CommandLineRunner runner(TaskService taskService){
         return args -> {
             taskService.save( new Task(1L,"Create Spring Boot Application", LocalDate.now(), true) );
             taskService.save( new Task(2L,"Create Spring Project Packages", LocalDate.now().plus(1, ChronoUnit.DAYS), false) );
@@ -29,7 +29,7 @@ public class TasksApplication {
             taskService.save( new Task(7L,"Run the Spring Boot Application", LocalDate.now().plus(12,ChronoUnit.DAYS), false) );
             taskService.save( new Task(8L,"Check the H2 Console for the initial data", LocalDate.now().plus(13,ChronoUnit.DAYS), false) );
         };
-	}
+    }
 
 }
 

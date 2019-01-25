@@ -1,7 +1,6 @@
-package com.mkpouto.tasks.domain;
+package com.mkpouto.domain;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -11,18 +10,21 @@ import java.time.LocalDate;
 
 @Entity
 @Data
-@AllArgsConstructor
+//@AllArgsConstructor
 public class Task {
 
     @Id
     @GeneratedValue
-    private Long id;
+    private long id;
 
     private String name;
 
     @JsonFormat(pattern ="MM/dd/yyyy")
     private LocalDate dueDate;
 
-    private Boolean completed;
+    private boolean completed;
 
+    public Task(long id, String name, LocalDate dueDate, boolean completed) {
+
+    }
 }

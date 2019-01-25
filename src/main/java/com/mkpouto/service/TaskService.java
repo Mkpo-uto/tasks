@@ -1,11 +1,12 @@
-package com.mkpouto.tasks.service;
+package com.mkpouto.service;
 
-import com.mkpouto.tasks.domain.Task;
+import com.mkpouto.domain.Task;
 
 public interface TaskService {
 
     Iterable<Task> list();
 
+    //save a new task
     Task save(Task task);
 
 

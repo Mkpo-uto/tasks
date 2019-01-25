@@ -1,7 +1,7 @@
-package com.mkpouto.tasks.controller;
+package com.mkpouto.controller;
 
-import com.mkpouto.tasks.domain.Task;
-import com.mkpouto.tasks.service.TaskService;
+import com.mkpouto.domain.Task;
+import com.mkpouto.service.TaskService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -22,6 +22,6 @@ public class TaskController {
     @PostMapping("/save")
     public Task saveTask(@RequestBody Task task){
         return this.taskService.save(task);
-    };
+    }
 
 }
